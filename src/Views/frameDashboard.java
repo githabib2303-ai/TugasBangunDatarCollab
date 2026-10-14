@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package bangun_datar;
+package Views;
+
+import bangun_datar.RoundedPanel;
 
 /**
  *
@@ -17,6 +19,9 @@ public class frameDashboard extends javax.swing.JFrame {
      */
     public frameDashboard() {
         initComponents();
+        
+        //menambah code untuk menampilkan user
+        Username.setText("Halo, " + Login.username);
         
         //menambahkan margin untuk card dengan panel
         panelCard.setBorder(
@@ -68,6 +73,9 @@ public class frameDashboard extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        panelUser = new javax.swing.JPanel();
+        iconUser = new javax.swing.JLabel();
+        Username = new javax.swing.JLabel();
         panelIsi = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         panelCard = new javax.swing.JPanel();
@@ -106,12 +114,13 @@ public class frameDashboard extends javax.swing.JFrame {
         panelLogo.setBackground(new java.awt.Color(209, 242, 255));
         panelLogo.setPreferredSize(new java.awt.Dimension(150, 160));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/beranda2.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/image/beranda2.png"))); // NOI18N
         panelLogo.add(jLabel4);
 
         panelHeader.add(panelLogo, java.awt.BorderLayout.LINE_START);
 
         panelJudul.setBackground(new java.awt.Color(209, 242, 255));
+        panelJudul.setPreferredSize(new java.awt.Dimension(600, 249));
         panelJudul.setLayout(new java.awt.BorderLayout());
 
         jPanel1.setBackground(new java.awt.Color(209, 242, 255));
@@ -132,7 +141,7 @@ public class frameDashboard extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 54, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,7 +162,7 @@ public class frameDashboard extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 954, Short.MAX_VALUE)
+            .addGap(0, 974, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,6 +172,18 @@ public class frameDashboard extends javax.swing.JFrame {
         panelJudul.add(jPanel2, java.awt.BorderLayout.PAGE_END);
 
         panelHeader.add(panelJudul, java.awt.BorderLayout.CENTER);
+
+        panelUser.setBackground(new java.awt.Color(209, 242, 255));
+        panelUser.setPreferredSize(new java.awt.Dimension(150, 170));
+        panelUser.setLayout(new java.awt.BorderLayout());
+
+        iconUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/image/icons8-profile-48.png"))); // NOI18N
+        panelUser.add(iconUser, java.awt.BorderLayout.LINE_START);
+
+        Username.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        panelUser.add(Username, java.awt.BorderLayout.CENTER);
+
+        panelHeader.add(panelUser, java.awt.BorderLayout.LINE_END);
 
         panelUtama.add(panelHeader, java.awt.BorderLayout.PAGE_START);
 
@@ -188,7 +209,7 @@ public class frameDashboard extends javax.swing.JFrame {
         panelSegitiga.setLayout(new java.awt.BorderLayout());
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/SEGITIGAA.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/image/SEGITIGAA.png"))); // NOI18N
         jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel7.setPreferredSize(new java.awt.Dimension(150, 20));
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -218,7 +239,7 @@ public class frameDashboard extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/PERSEGI.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/image/PERSEGI.png"))); // NOI18N
         jLabel6.setPreferredSize(new java.awt.Dimension(150, 20));
         panelPersegi.add(jLabel6, java.awt.BorderLayout.CENTER);
 
@@ -241,7 +262,7 @@ public class frameDashboard extends javax.swing.JFrame {
         panelPersegiPanjang.setLayout(new java.awt.BorderLayout());
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/PERSEGI PANJANG.png"))); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/image/PERSEGI PANJANG.png"))); // NOI18N
         jLabel12.setPreferredSize(new java.awt.Dimension(150, 20));
         panelPersegiPanjang.add(jLabel12, java.awt.BorderLayout.CENTER);
 
@@ -276,7 +297,7 @@ public class frameDashboard extends javax.swing.JFrame {
         panelLingkaran.add(jLabel11, java.awt.BorderLayout.PAGE_END);
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/LINGKARAN.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/image/LINGKARAN.png"))); // NOI18N
         jLabel13.setPreferredSize(new java.awt.Dimension(150, 20));
         panelLingkaran.add(jLabel13, java.awt.BorderLayout.CENTER);
 
@@ -287,7 +308,7 @@ public class frameDashboard extends javax.swing.JFrame {
         panelJajarGenjang.setLayout(new java.awt.BorderLayout());
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/JAJAR GENJANG.png"))); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/image/JAJAR GENJANG.png"))); // NOI18N
         jLabel15.setPreferredSize(new java.awt.Dimension(150, 20));
         panelJajarGenjang.add(jLabel15, java.awt.BorderLayout.CENTER);
 
@@ -321,7 +342,7 @@ public class frameDashboard extends javax.swing.JFrame {
         panelBelahKetupat.add(jLabel16, java.awt.BorderLayout.PAGE_END);
 
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/BELAH KETUPAT.png"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/image/BELAH KETUPAT.png"))); // NOI18N
         jLabel17.setPreferredSize(new java.awt.Dimension(150, 20));
         panelBelahKetupat.add(jLabel17, java.awt.BorderLayout.CENTER);
 
@@ -339,7 +360,7 @@ public class frameDashboard extends javax.swing.JFrame {
         panelFooterLayout.setHorizontalGroup(
             panelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelFooterLayout.createSequentialGroup()
-                .addContainerGap(1010, Short.MAX_VALUE)
+                .addContainerGap(1180, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(20, 20, 20))
         );
@@ -414,14 +435,6 @@ public class frameDashboard extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel14MouseClicked
 
-    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
-        // TODO add your handling code here:
-        framezaki1 jjr = new framezaki1();
-        jjr.setLocationRelativeTo(null);
-        jjr.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel14MouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -439,6 +452,8 @@ public class frameDashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Username;
+    private javax.swing.JLabel iconUser;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -470,6 +485,7 @@ public class frameDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel panelPersegi;
     private javax.swing.JPanel panelPersegiPanjang;
     private javax.swing.JPanel panelSegitiga;
+    private javax.swing.JPanel panelUser;
     private javax.swing.JPanel panelUtama;
     // End of variables declaration//GEN-END:variables
 }

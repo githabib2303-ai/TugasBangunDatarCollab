@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package bangun_datar;
+package models;
 
 /**
  *
  * @author acer
  */
-public class persegiPanjang_Khabib {
+public class persegiPanjang_Khabib extends BangunDatar{
     //membuat atribut
-    private double panjang;
-    private double lebar;
-    private double luas;
-    private double keliling;
+    public double panjang;
+    public double lebar;
+//    public double luas;
+//    public double keliling;
     
     
     //membuat konstruktor kosong
@@ -45,18 +45,20 @@ public class persegiPanjang_Khabib {
         this.lebar = lebar;
     }
     
-      public double getLuas() {
-        return luas;
-    }
-
-    public double getKeliling() {
-        return keliling;
-    }
+//      public double getLuas() {
+//        return luas;
+//    }
+//
+//    public double getKeliling() {
+//        return keliling;
+//    }
      
+    @Override
      //method untuk menghitung luas dan keliling
      public void hitungLuas(){
          luas = panjang*lebar;
      }
+     @Override
      public void hitungKeliling(){
          keliling =  2*(panjang + lebar);
      }

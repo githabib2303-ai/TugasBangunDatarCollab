@@ -2,20 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package bangun_datar;
+package Views;
+
+import models.zakijajargenjang;
 
 /**
  *
- * @author 
+ * @author acer
  */
-public class frameDitya1 extends javax.swing.JFrame {
+public class framezaki1 extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frameDitya1.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(framezaki1.class.getName());
 
     /**
      * Creates new form frameKhabib
      */
-    public frameDitya1() {
+    public framezaki1() {
         initComponents();
     }
 
@@ -36,63 +38,80 @@ public class frameDitya1 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        tSisi = new javax.swing.JTextField();
-        tDiagonal2 = new javax.swing.JTextField();
+        tAlas = new javax.swing.JTextField();
+        tSisiMiring = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        tDiagonal1 = new javax.swing.JTextField();
-        bHitung = new javax.swing.JButton();
+        tTinggi = new javax.swing.JTextField();
         bReset = new javax.swing.JButton();
+        bHitung = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        tHasilLuas = new javax.swing.JLabel();
-        tHasilKeliling = new javax.swing.JLabel();
+        hasilLuas = new javax.swing.JLabel();
+        hasilKeliling = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel3.setBackground(new java.awt.Color(102, 204, 255));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/Belah_Ketupat.jpg-removebg-preview.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/Jajar_Genjang.jpg-removebg-preview 1.png"))); // NOI18N
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Bodoni MT Black", 1, 24)); // NOI18N
         jLabel8.setText("BANGUN DATAR");
 
         jLabel9.setFont(new java.awt.Font("Bodoni MT Black", 1, 18)); // NOI18N
-        jLabel9.setText("BELAH KETUPAT");
+        jLabel9.setText("JAJAR GENJANG ");
 
         jLabel10.setFont(new java.awt.Font("Berlin Sans FB", 2, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 51, 204));
-        jLabel10.setText("Menghitung Luas dan Keliling dari bangun datar Belah ketupat");
+        jLabel10.setText("Menghitung Luas dan Keliling dari bangun datar JajarGenjang");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Input", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 255))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel2.setText("Sisi            ");
+        jLabel2.setText("Alas :");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        jLabel3.setText("Diagonal 1   ");
+        jLabel3.setText("Tinggi :");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("Diagonal 2 ");
+        jLabel4.setText("Sisi Miring :");
+
+        bReset.setBackground(new java.awt.Color(51, 153, 255));
+        bReset.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/icons8-reset-30.png"))); // NOI18N
+        bReset.setText("Reset");
+        bReset.addActionListener(this::bResetActionPerformed);
+
+        bHitung.setBackground(new java.awt.Color(51, 153, 255));
+        bHitung.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        bHitung.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/icons8-count-20.png"))); // NOI18N
+        bHitung.setText("Hitung");
+        bHitung.addActionListener(this::bHitungActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tDiagonal2, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tDiagonal1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
-                        .addComponent(tSisi, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bHitung)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(tTinggi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 342, Short.MAX_VALUE)
+                    .addComponent(tSisiMiring, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tAlas)
+                    .addComponent(bReset))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -101,29 +120,20 @@ public class frameDitya1 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(tSisi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tAlas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tDiagonal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tTinggi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(tDiagonal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(19, Short.MAX_VALUE))
+                    .addComponent(tSisiMiring, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bReset)
+                    .addComponent(bHitung, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
-
-        bHitung.setBackground(new java.awt.Color(51, 153, 255));
-        bHitung.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        bHitung.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/icons8-count-20.png"))); // NOI18N
-        bHitung.setText("Hitung");
-        bHitung.addActionListener(this::bHitungActionPerformed);
-
-        bReset.setBackground(new java.awt.Color(51, 153, 255));
-        bReset.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        bReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/icons8-reset-30.png"))); // NOI18N
-        bReset.setText("Reset");
-        bReset.addActionListener(this::bResetActionPerformed);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/icons8-home-40.png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -135,35 +145,34 @@ public class frameDitya1 extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Output", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 153, 255))); // NOI18N
 
-        tHasilLuas.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        tHasilLuas.setText("Luas ");
+        hasilLuas.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        hasilLuas.setText("Luas :");
 
-        tHasilKeliling.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        tHasilKeliling.setText("Keliling :");
+        hasilKeliling.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        hasilKeliling.setText("Keliling :");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(tHasilLuas, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(tHasilKeliling, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(hasilKeliling, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(hasilLuas, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(tHasilLuas, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hasilLuas, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(tHasilKeliling, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addComponent(hasilKeliling, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -174,6 +183,7 @@ public class frameDitya1 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,15 +194,9 @@ public class frameDitya1 extends javax.swing.JFrame {
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel9)))
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 481, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(bHitung)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bReset)
-                .addGap(109, 109, 109))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -209,30 +213,26 @@ public class frameDitya1 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10))
-                    .addComponent(jLabel7))
-                .addGap(18, 18, 18)
+                        .addComponent(jLabel10)
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bHitung, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bReset))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 484, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -240,33 +240,33 @@ public class frameDitya1 extends javax.swing.JFrame {
 
     private void bResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bResetActionPerformed
         // TODO add your handling code here:
+        //tAlas.setText("");
+        //tTinggi.setText("");
+        //tSisiMiring.setText("");
         
-        tSisi.setText("");
-        tDiagonal1.setText("");
-        tDiagonal2.setText("");
-
         
-        tHasilLuas.setText("Luas :");
-        tHasilKeliling.setText("Keliling :");
+        tAlas.setText("");
+        tTinggi.setText("");
+        tSisiMiring.setText("");
+        hasilLuas.setText("Luas : ");
+        hasilKeliling.setText("Keliling : ");
                             
     }//GEN-LAST:event_bResetActionPerformed
 
     private void bHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bHitungActionPerformed
         // TODO add your handling code here:
-     belahketupat_aditya bk = new belahketupat_aditya();
-
-    bk.setSisi(Double.parseDouble(tSisi.getText()));
-    bk.setDiagonal1(Double.parseDouble(tDiagonal1.getText()));
-    bk.setDiagonal2(Double.parseDouble(tDiagonal2.getText()));
-
-    bk.hitungLuas();
-    bk.hitungKeliling();
-
-    tHasilLuas.setText("Luas : " + bk.getLuas());
-    tHasilKeliling.setText("Keliling : " + bk.getKeliling());
-        
+        //membuat objeck
+          zakijajargenjang jjr = new zakijajargenjang();
+          
+        //meng convert dai string ke double  
+        jjr.setAlas(Double.parseDouble(tAlas.getText()));
+        jjr.setTinggi(Double.parseDouble(tTinggi.getText()));
+        jjr.setSisimiring(Double.parseDouble(tSisiMiring.getText()));
         
 
+        //menampilkan output ke layar
+        hasilLuas.setText("Luas : " + jjr.getLuas());
+        hasilKeliling.setText("Keliling : " + jjr.getKeliling());
     }//GEN-LAST:event_bHitungActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
@@ -299,12 +299,14 @@ public class frameDitya1 extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new frameDitya1().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new framezaki1().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bHitung;
     private javax.swing.JButton bReset;
+    private javax.swing.JLabel hasilKeliling;
+    private javax.swing.JLabel hasilLuas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -316,10 +318,8 @@ public class frameDitya1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField tDiagonal1;
-    private javax.swing.JTextField tDiagonal2;
-    private javax.swing.JLabel tHasilKeliling;
-    private javax.swing.JLabel tHasilLuas;
-    private javax.swing.JTextField tSisi;
+    private javax.swing.JTextField tAlas;
+    private javax.swing.JTextField tSisiMiring;
+    private javax.swing.JTextField tTinggi;
     // End of variables declaration//GEN-END:variables
 }

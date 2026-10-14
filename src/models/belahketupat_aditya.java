@@ -2,27 +2,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package bangun_datar;
+package models;
 
 /**
  *
  * @author ThinkPad
  */
-public class belahketupat_aditya {
+public class belahketupat_aditya extends BangunDatar {
 // 1. Atribut
     private double sisi;
     private double diagonal1;
     private double diagonal2;
-    private double luas;
-    private double keliling;
+    
 
     // 2. Satu Konstruktor (Konstruktor Kosong)
     public belahketupat_aditya() {
         this.sisi = 0;
         this.diagonal1 = 0;
         this.diagonal2 = 0;
-        this.luas = 0;
-        this.keliling = 0;
     }
 
     // 3. Getter & Setter Atribut Input
@@ -51,21 +48,16 @@ public class belahketupat_aditya {
     }
 
     // 4. Method Perhitungan
+    @Override
     public void hitungLuas() {
         luas = 0.5 * diagonal1 * diagonal2;
     }
-
+    
+    @Override
     public void hitungKeliling() {
-        this.keliling = 4 * sisi;
+        keliling = 4 * sisi;
     }
 
-    // 5. Getter Hasil Luas dan Keliling
-    public double getLuas() {
-        return luas;
-    }
-
-    public double getKeliling() {
-        return keliling;
-    }
+    
 }
 

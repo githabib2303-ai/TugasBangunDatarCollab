@@ -2,20 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package bangun_datar;
+package models;
 
 /**
  *
  * @author ACER
  */
-public class Segitiga_shofi {
-private  double alas;
-private  double tinggi;
-private  double sisiA;
-private  double sisiB;
-private  double sisiC;
-private  double luas;
-private  double keliling;
+public class Segitiga_shofi extends BangunDatar{
+public  double alas;
+public  double tinggi;
+public  double sisiA;
+public  double sisiB;
+public  double sisiC;
+//public  double luas;
+//public  double keliling;
 
     public Segitiga_shofi(){
         alas = 0.0;
@@ -73,14 +73,22 @@ private  double keliling;
         return sisiC;
     }
 
-    public double getLuas() {
-        luas = 0.5 * alas * tinggi  ;
-        return luas;
+//    public double getLuas() {
+//        luas = 0.5 * alas * tinggi  ;
+//        return luas;
+//    }
+//
+//    //public double getKeliling() {
+//    // keliling = sisiA + sisiB + sisiC;
+//        return keliling;
+    @Override
+    //method untuk menghitung luas dan keliling 
+    public void hitungLuas(){
+     luas = 0.5 * alas * tinggi;
     }
-
-    public double getKeliling() {
-        keliling = sisiA + sisiB + sisiC;
-        return keliling;
+    @Override
+    public void hitungKeliling(){
+     keliling = sisiA + sisiB + sisiC;
     
         }
 }

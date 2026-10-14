@@ -23,20 +23,20 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel3" max="32767" attributes="0"/>
+          <Component id="panelUtama" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+              <Component id="panelUtama" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel3">
+    <Container class="javax.swing.JPanel" name="panelUtama">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="cc" red="66" type="rgb"/>
@@ -48,16 +48,16 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                  <Component id="icon" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                          <Component id="bangunDatar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jLabel10" alignment="0" min="-2" pref="396" max="-2" attributes="0"/>
-                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="keterangan" alignment="0" min="-2" pref="396" max="-2" attributes="0"/>
+                      <Component id="persegiPanjang" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -65,11 +65,11 @@
                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jPanel2" min="-2" pref="459" max="-2" attributes="0"/>
+                          <Component id="panelOutput" min="-2" pref="459" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="panelInput" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -95,42 +95,42 @@
                               </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                  <Component id="jLabel8" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Component id="bangunDatar" min="-2" pref="40" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <Component id="persegiPanjang" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                          <Component id="keterangan" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                          <Component id="icon" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="panelInput" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="bHitung" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
                       <Component id="bReset" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="panelOutput" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="42" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="icon">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/bangun_datar/img/persegi panjangg.png"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="bangunDatar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -141,7 +141,7 @@
             <Property name="text" type="java.lang.String" value="BANGUN DATAR"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="persegiPanjang">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Bodoni MT Black" size="18" style="1"/>
@@ -149,7 +149,7 @@
             <Property name="text" type="java.lang.String" value="Persegi Panjang"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="keterangan">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Berlin Sans FB" size="12" style="2"/>
@@ -160,7 +160,7 @@
             <Property name="text" type="java.lang.String" value="Menghitung Luas dan Keliling dari bangun datar Persegi Panjang."/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JPanel" name="jPanel1">
+        <Container class="javax.swing.JPanel" name="panelInput">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -228,6 +228,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="tPanjang">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tPanjangActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="tLebar">
             </Component>
@@ -277,7 +280,7 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel1MouseClicked"/>
           </Events>
         </Component>
-        <Container class="javax.swing.JPanel" name="jPanel2">
+        <Container class="javax.swing.JPanel" name="panelOutput">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>

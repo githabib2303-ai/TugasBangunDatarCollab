@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package bangun_datar;
+package Views;
+
+import models.persegiPanjang_Khabib;
 
 /**
  *
@@ -28,12 +30,12 @@ public class frameKhabib1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel3 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        panelUtama = new javax.swing.JPanel();
+        icon = new javax.swing.JLabel();
+        bangunDatar = new javax.swing.JLabel();
+        persegiPanjang = new javax.swing.JLabel();
+        keterangan = new javax.swing.JLabel();
+        panelInput = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         tPanjang = new javax.swing.JTextField();
@@ -41,29 +43,29 @@ public class frameKhabib1 extends javax.swing.JFrame {
         bHitung = new javax.swing.JButton();
         bReset = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        panelOutput = new javax.swing.JPanel();
         hasilLuas = new javax.swing.JLabel();
         hasilKeliling = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel3.setBackground(new java.awt.Color(102, 204, 255));
+        panelUtama.setBackground(new java.awt.Color(102, 204, 255));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/persegi panjangg.png"))); // NOI18N
+        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bangun_datar/img/persegi panjangg.png"))); // NOI18N
 
-        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Bodoni MT Black", 1, 24)); // NOI18N
-        jLabel8.setText("BANGUN DATAR");
+        bangunDatar.setBackground(new java.awt.Color(255, 255, 255));
+        bangunDatar.setFont(new java.awt.Font("Bodoni MT Black", 1, 24)); // NOI18N
+        bangunDatar.setText("BANGUN DATAR");
 
-        jLabel9.setFont(new java.awt.Font("Bodoni MT Black", 1, 18)); // NOI18N
-        jLabel9.setText("Persegi Panjang");
+        persegiPanjang.setFont(new java.awt.Font("Bodoni MT Black", 1, 18)); // NOI18N
+        persegiPanjang.setText("Persegi Panjang");
 
-        jLabel10.setFont(new java.awt.Font("Berlin Sans FB", 2, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 51, 204));
-        jLabel10.setText("Menghitung Luas dan Keliling dari bangun datar Persegi Panjang.");
+        keterangan.setFont(new java.awt.Font("Berlin Sans FB", 2, 12)); // NOI18N
+        keterangan.setForeground(new java.awt.Color(0, 51, 204));
+        keterangan.setText("Menghitung Luas dan Keliling dari bangun datar Persegi Panjang.");
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Input", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 255))); // NOI18N
+        panelInput.setBackground(new java.awt.Color(255, 255, 255));
+        panelInput.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Input", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 255))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel2.setText("Panjang :");
@@ -71,30 +73,32 @@ public class frameKhabib1 extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel3.setText("Lebar : ");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        tPanjang.addActionListener(this::tPanjangActionPerformed);
+
+        javax.swing.GroupLayout panelInputLayout = new javax.swing.GroupLayout(panelInput);
+        panelInput.setLayout(panelInputLayout);
+        panelInputLayout.setHorizontalGroup(
+            panelInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelInputLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(panelInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(tPanjang, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
                     .addComponent(tLebar))
                 .addGap(0, 18, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        panelInputLayout.setVerticalGroup(
+            panelInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelInputLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(tPanjang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tLebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addContainerGap(58, Short.MAX_VALUE))
@@ -119,8 +123,8 @@ public class frameKhabib1 extends javax.swing.JFrame {
             }
         });
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Output", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 153, 255))); // NOI18N
+        panelOutput.setBackground(new java.awt.Color(255, 255, 255));
+        panelOutput.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Output", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 153, 255))); // NOI18N
 
         hasilLuas.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         hasilLuas.setText("Luas :");
@@ -128,22 +132,22 @@ public class frameKhabib1 extends javax.swing.JFrame {
         hasilKeliling.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         hasilKeliling.setText("Keliling :");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelOutputLayout = new javax.swing.GroupLayout(panelOutput);
+        panelOutput.setLayout(panelOutputLayout);
+        panelOutputLayout.setHorizontalGroup(
+            panelOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelOutputLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(hasilLuas, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(panelOutputLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(hasilKeliling, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        panelOutputLayout.setVerticalGroup(
+            panelOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelOutputLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(hasilLuas, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -151,65 +155,65 @@ public class frameKhabib1 extends javax.swing.JFrame {
                 .addContainerGap(83, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelUtamaLayout = new javax.swing.GroupLayout(panelUtama);
+        panelUtama.setLayout(panelUtamaLayout);
+        panelUtamaLayout.setHorizontalGroup(
+            panelUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelUtamaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7)
+                .addComponent(icon)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel8)
+                .addGroup(panelUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelUtamaLayout.createSequentialGroup()
+                        .addComponent(bangunDatar)
                         .addGap(60, 60, 60)
                         .addComponent(jLabel1))
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
+                    .addComponent(keterangan, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(persegiPanjang))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
+            .addGroup(panelUtamaLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelUtamaLayout.createSequentialGroup()
+                        .addComponent(panelOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelUtamaLayout.createSequentialGroup()
+                        .addComponent(panelInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(panelUtamaLayout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addComponent(bHitung)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(bReset)
                         .addGap(103, 103, 103))))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+        panelUtamaLayout.setVerticalGroup(
+            panelUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelUtamaLayout.createSequentialGroup()
+                .addGroup(panelUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelUtamaLayout.createSequentialGroup()
+                        .addGroup(panelUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelUtamaLayout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel1))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addGroup(panelUtamaLayout.createSequentialGroup()
                                 .addGap(27, 27, 27)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(bangunDatar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9)
+                        .addComponent(persegiPanjang)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(keterangan))
+                    .addGroup(panelUtamaLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel7)))
+                        .addComponent(icon)))
                 .addGap(30, 30, 30)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bHitung, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bReset))
                 .addGap(38, 38, 38)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelOutput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(42, Short.MAX_VALUE))
         );
 
@@ -217,12 +221,12 @@ public class frameKhabib1 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelUtama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelUtama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -233,8 +237,7 @@ public class frameKhabib1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         tPanjang.setText("");
         tLebar.setText("");
-  
-
+ 
         hasilLuas.setText("Luas :");
         hasilKeliling.setText("Keliling :");
                             
@@ -242,13 +245,14 @@ public class frameKhabib1 extends javax.swing.JFrame {
 
     private void bHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bHitungActionPerformed
         // TODO add your handling code here:
-        
         persegiPanjang_Khabib pppanjang = new persegiPanjang_Khabib();
 
-        pppanjang.setLebar(Double.parseDouble(tPanjang.getText()));
+        pppanjang.setPanjang(Double.parseDouble(tPanjang.getText()));
         pppanjang.setLebar(Double.parseDouble(tLebar.getText()));
         
-     
+        pppanjang.hitungLuas();
+        pppanjang.hitungKeliling();
+        
         hasilLuas.setText("Luas : " + pppanjang.getLuas());
         hasilKeliling.setText("Keliling : " + pppanjang.getKeliling());
     }//GEN-LAST:event_bHitungActionPerformed
@@ -260,6 +264,10 @@ public class frameKhabib1 extends javax.swing.JFrame {
         home.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void tPanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tPanjangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tPanjangActionPerformed
 
     /**
      * @param args the command line arguments
@@ -289,18 +297,18 @@ public class frameKhabib1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bHitung;
     private javax.swing.JButton bReset;
+    private javax.swing.JLabel bangunDatar;
     private javax.swing.JLabel hasilKeliling;
     private javax.swing.JLabel hasilLuas;
+    private javax.swing.JLabel icon;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel keterangan;
+    private javax.swing.JPanel panelInput;
+    private javax.swing.JPanel panelOutput;
+    private javax.swing.JPanel panelUtama;
+    private javax.swing.JLabel persegiPanjang;
     private javax.swing.JTextField tLebar;
     private javax.swing.JTextField tPanjang;
     // End of variables declaration//GEN-END:variables
