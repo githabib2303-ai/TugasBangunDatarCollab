@@ -55,8 +55,6 @@ public class Bangun_datar {
 
         bangun.setPanjang(20);
         bangun.setLebar(15);
-        bangun.hitungLuas();
-        bangun.hitungKeliling();
 
         System.out.println("=================================");
         System.out.println("      BANGUN PERSEGI PANJANG     ");
@@ -118,29 +116,5 @@ public class Bangun_datar {
         System.out.println("Keliling    : " + jjr.getKeliling());
         System.out.println("=================================");
 
-        // Polymorphism
-        BangunDatar[] daftarBangun = {
-            lkr,
-            persegi,
-            bangun,
-            sgt,
-            belahKetupat,
-            jjr
-        };
-
-        System.out.println("\n=================================");
-        System.out.println("     POLYMORPHISM BANGUN DATAR   ");
-        System.out.println("=================================");
-
-        for (BangunDatar bd : daftarBangun) {
-            bd.hitungLuas();
-            bd.hitungKeliling();
-
-            System.out.println("nama class    : "
-                    + bd.getClass().getSimpleName());
-            System.out.println("Luas     : " + bd.getLuas());
-            System.out.println("Keliling : " + bd.getKeliling());
-            System.out.println("---------------------------------");
-        }
-    }
+    }     
 }
