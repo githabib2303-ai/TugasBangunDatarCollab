@@ -8,14 +8,14 @@ package models;
  *
  * @author ACER
  */
-public class Segitiga_shofi {
+public class Segitiga_shofi extends BangunDatar{
 public  double alas;
 public  double tinggi;
 public  double sisiA;
 public  double sisiB;
 public  double sisiC;
-public  double luas;
-public  double keliling;
+//public  double luas;
+//public  double keliling;
 
     public Segitiga_shofi(){
         alas = 0.0;
@@ -73,14 +73,22 @@ public  double keliling;
         return sisiC;
     }
 
-    public double getLuas() {
-        luas = 0.5 * alas * tinggi  ;
-        return luas;
+//    public double getLuas() {
+//        luas = 0.5 * alas * tinggi  ;
+//        return luas;
+//    }
+//
+//    //public double getKeliling() {
+//    // keliling = sisiA + sisiB + sisiC;
+//        return keliling;
+    @Override
+    //method untuk menghitung luas dan keliling 
+    public void hitungLuas(){
+     luas = 0.5 * alas * tinggi;
     }
-
-    public double getKeliling() {
-        keliling = sisiA + sisiB + sisiC;
-        return keliling;
+    @Override
+    public void hitungKeliling(){
+     keliling = sisiA + sisiB + sisiC;
     
         }
 }
