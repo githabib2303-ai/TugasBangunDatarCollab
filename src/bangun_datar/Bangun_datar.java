@@ -80,28 +80,28 @@ public class Bangun_datar {
         System.out.println();
 
         // Belah Ketupat
-        double sisiBelahKetupat = 10.0;
-        double d1 = 12.0;
-        double d2 = 16.0;
+        // Belah Ketupat
+        belahketupat_aditya belahKetupat =
+                new belahketupat_aditya();
 
-        belahketupat_aditya belahKetupat = new belahketupat_aditya();
+        belahKetupat.setSisi(10.0);
+        belahKetupat.setDiagonal1(12.0);
+        belahKetupat.setDiagonal2(16.0);
 
-        belahKetupat.setSisi(sisiBelahKetupat);
-        belahKetupat.setDiagonal1(d1);
-        belahKetupat.setDiagonal2(d2);
         belahKetupat.hitungLuas();
         belahKetupat.hitungKeliling();
 
         System.out.println("=================================");
-        System.out.println("      BANGUN BELAH KETUPAT       ");
+        System.out.println("        BANGUN BELAH KETUPAT     ");
         System.out.println("=================================");
-        System.out.println("Sisi       : " + belahKetupat.getSisi());
-        System.out.println("Diagonal 1 : " + belahKetupat.getDiagonal1());
-        System.out.println("Diagonal 2 : " + belahKetupat.getDiagonal2());
-        System.out.println("Luas       : " + belahKetupat.getLuas());
-        System.out.println("Keliling   : " + belahKetupat.getKeliling());
+        System.out.println("Sisi      : " + belahKetupat.getSisi());
+        System.out.println("Diagonal 1: " + belahKetupat.getDiagonal1());
+        System.out.println("Diagonal 2: " + belahKetupat.getDiagonal2());
+        System.out.println("Luas      : " + belahKetupat.getLuas());
+        System.out.println("Keliling  : " + belahKetupat.getKeliling());
         System.out.println("=================================");
-
+        
+        
         // Jajar Genjang
         zakijajargenjang jjr = new zakijajargenjang(3, 2, 3);
 
