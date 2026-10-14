@@ -8,15 +8,13 @@ package models;
  *
  * @author user
  */
-public class Lingkaran_Audi {
+public class Lingkaran_Audi extends BangunDatar{
     public double jari_jari;
     public double phi = 3.14;
     
+    
     public Lingkaran_Audi(){
-        
-    }
-    public Lingkaran_Audi(double jari_jari) {
-        this.jari_jari = jari_jari;
+        jari_jari = 0.0;
     }
     
     public Lingkaran_Audi(double jari_jari, double phi){
