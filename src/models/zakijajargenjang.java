@@ -8,13 +8,12 @@ package models;
  *
  * @author zaki reza
  */
-public class zakijajargenjang {
+public class zakijajargenjang extends BangunDatar{
     
-    private double alas;
- private double tinggi;
- private double sisimiring;
- private double luas;
- private double keliling;
+private double alas;
+private double tinggi;
+private double sisimiring;
+
 
     public zakijajargenjang() {
            alas = 0.0;
@@ -51,14 +50,15 @@ public class zakijajargenjang {
     public void setSisimiring(double sisimiring) {
         this.sisimiring = sisimiring;
     }
-
-    public double getLuas() {
-        luas = alas * tinggi;
-        return luas;
+    
+    @Override
+    public void hitungLuas() {
+        luas = alas * tinggi; 
     }
-    public double getKeliling() {
+    @Override
+    public void hitungKeliling() {
         keliling = 2 * (alas + sisimiring);
-        return keliling;
+     
     }
     
 }
