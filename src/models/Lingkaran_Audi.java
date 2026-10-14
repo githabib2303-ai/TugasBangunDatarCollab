@@ -14,7 +14,7 @@ public class Lingkaran_Audi extends BangunDatar{
     
     
     public Lingkaran_Audi(){
-        jari_jari = 0.0;
+        this.jari_jari= 0.0;
     }
     
     public Lingkaran_Audi(double jari_jari, double phi){
