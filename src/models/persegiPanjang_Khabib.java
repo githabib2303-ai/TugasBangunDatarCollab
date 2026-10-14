@@ -8,12 +8,12 @@ package models;
  *
  * @author acer
  */
-public class persegiPanjang_Khabib {
+public class persegiPanjang_Khabib extends BangunDatar{
     //membuat atribut
     public double panjang;
     public double lebar;
-    public double luas;
-    public double keliling;
+//    public double luas;
+//    public double keliling;
     
     
     //membuat konstruktor kosong
@@ -45,18 +45,20 @@ public class persegiPanjang_Khabib {
         this.lebar = lebar;
     }
     
-      public double getLuas() {
-        return luas;
-    }
-
-    public double getKeliling() {
-        return keliling;
-    }
+//      public double getLuas() {
+//        return luas;
+//    }
+//
+//    public double getKeliling() {
+//        return keliling;
+//    }
      
+    @Override
      //method untuk menghitung luas dan keliling
      public void hitungLuas(){
          luas = panjang*lebar;
      }
+     @Override
      public void hitungKeliling(){
          keliling =  2*(panjang + lebar);
      }
