@@ -30,7 +30,6 @@ public class Bangun_datar {
         System.out.println("          BANGUN LINGKARAN       ");
         System.out.println("=================================");
         System.out.println("Jari-jari\t\t: " + lkr.getJari_jari());
-        System.out.println("Diameter\t\t: " + lkr.getDiameter());
         System.out.println("Luas\t\t\t: " + lkr.getLuas());
         System.out.println("Keliling\t\t: " + lkr.getKeliling());
 

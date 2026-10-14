@@ -24,6 +24,10 @@ public class Lingkaran_Audi extends BangunDatar {
         this.jari_jari = jari_jari;
     }
 
+    public double getJari_jari() {
+        return jari_jari;
+    }
+
     //method untuk menghitung luas 
     @Override
     public void hitungLuas() {
