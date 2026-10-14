@@ -36,16 +36,24 @@ public class Lingkaran_Audi {
         return 2 * jari_jari;
     }
 
-    public double getLuas() {
-        return phi * jari_jari * jari_jari;
-    }
+    //public double getLuas() {
+     //   return phi * jari_jari * jari_jari;
+    //}
 
-    public double getKeliling() {
-        return 2 * phi * jari_jari;
-    }
+    //public double getKeliling() {
+     //   return 2 * phi * jari_jari;
+   // }
 
-    public double getJari_jari() {
-        return jari_jari;
+    //public double getJari_jari() {
+     //   return jari_jari;
+    @Override
+    //method untuk menghitung luas dan keliling
+    public void hitungLuas(){
+     luas = phi * jari_jari * jari_jari;
+    }
+    @Override 
+    public void hitungKeliling(){
+     keliling = 2 * phi * jari_jari;
     }
 
     
